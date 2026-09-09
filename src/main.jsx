@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import './styles.css';
 
 const CONFIG = {
-  checkoutUrl: 'https://pay.kiwify.com.br/EQxzJ7a',
+  checkoutUrl: 'https://pay.hotmart.com/H107543517N',
   pixelId: '1330495329162779',
   gaMeasurementId: 'G-SJPJS8B9D1',
 };
