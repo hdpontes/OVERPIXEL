@@ -4,8 +4,8 @@ import './styles.css';
 
 const CONFIG = {
   checkoutUrl: 'https://pay.kiwify.com.br/EQxzJ7a',
-  pixelId: '',
-  gaMeasurementId: '',
+  pixelId: '1330495329162779',
+  gaMeasurementId: 'G-SJPJS8B9D1',
 };
 
 const faq = [
@@ -127,13 +127,13 @@ function App(){
             <h1>Comece nos <em>Personalizados</em> sem ficar perdido.</h1>
             <p className="lead">Um guia prático para descobrir <strong>o que vender, o que comprar, quanto cobrar e como encontrar clientes</strong> — mesmo começando com uma estrutura enxuta.</p>
             <div className="heroActions">
-              <a href={CONFIG.checkoutUrl} className="btn primary big" onClick={(e)=>goCheckout(e,'hero')}>QUERO O KIT COMPLETO <Icon name="arrow"/></a>
+              <a href="#oferta" className="btn primary big" onClick={(e)=>goCheckout(e,'hero')}>QUERO O KIT COMPLETO <Icon name="arrow"/></a>
               <a href="#conteudo" className="btn ghost big">Ver o conteúdo</a>
             </div>
             <div className="trustRow"><span><Icon name="check" size={16}/> E-book completo</span><span><Icon name="check" size={16}/> Planilha editável</span><span><Icon name="check" size={16}/> 500+ estampas</span></div>
           </div>
           <div className="heroVisual">
-            <div className="floatTag tagTop"><Icon name="zap" size={16}/> Comece enxuto</div>
+            <div className="floatTag tagTop"><Icon name="zap" size={16}/> Comece com pouco</div>
             <div className="bookMock">
               <div className="bookShadow"/>
               <img src="/assets/ebook-cover.png" alt="Capa do e-book Kit Comece nos Personalizados"/>
