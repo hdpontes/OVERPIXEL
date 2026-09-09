@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import './styles.css';
 
 const CONFIG = {
-  checkoutUrl: '/checkout/',
+  checkoutUrl: 'https://pay.kiwify.com.br/EQxzJ7a',
   pixelId: '',
   gaMeasurementId: '',
 };
