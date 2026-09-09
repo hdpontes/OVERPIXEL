@@ -1,0 +1,7 @@
+services:
+  landing:
+    build: .
+    container_name: overpixel-landing
+    restart: unless-stopped
+    ports:
+      - "8088:80"
