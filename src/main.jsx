@@ -46,7 +46,7 @@ const learn = [
 const niches = ['Academias', 'Escolas', 'Igrejas', 'Restaurantes', 'Barbearias', 'Salões', 'Pet shops', 'Imobiliárias', 'Empresas', 'Eventos'];
 
 const products = [
-  ['Camisetas Personalizadas', 'https://i.ibb.co/k6zs8YbY/Camisa-Preta-1591-Copia.png?auto=format&fit=crop&w=900&q=85', 'Camiseta personalizada com estampa'],
+  ['Camisetas Personalizadas', 'https://images.unsplash.com/photo-1578346021958-c58829af708b?auto=format&fit=crop&w=900&q=85', 'Camiseta personalizada com estampa'],
   ['Quadros', 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=900&q=85', 'Quadro decorativo personalizado'],
   ['Chinelos', 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=85', 'Chinelos e produtos de verão'],
   ['Chaveiros Personalizados', 'https://i.ibb.co/xtKR4pS6/br-11134207-820m7-mqzdcp3cmfid76-resize-w900-nl.webp?auto=format&fit=crop&w=900&q=85', 'Produtos pequenos para brindes'],
