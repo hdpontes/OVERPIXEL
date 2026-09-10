@@ -48,12 +48,12 @@ const learn = [
 const niches = ['Academias', 'Escolas', 'Igrejas', 'Restaurantes', 'Barbearias', 'Salões', 'Pet shops', 'Imobiliárias', 'Empresas', 'Eventos'];
 
 const products = [
-  ['Camisetas Personalizadas', 'https://images.unsplash.com/photo-1578346021958-c58829af708b?auto=format&fit=crop&w=900&q=85', 'Camiseta personalizada com estampa'],
+  ['Camisetas', 'https://images.unsplash.com/photo-1578346021958-c58829af708b?auto=format&fit=crop&w=900&q=85', 'Camiseta personalizada com estampa'],
   ['Canecas', 'https://i.ibb.co/Z11LncrR/Whats-App-Image-2026-09-10-at-16-33-01-1.jpg?auto=format&fit=crop&w=900&q=85', 'Canecas personalizadas para presentes'],
   ['Mousepads', 'https://i.ibb.co/F4Cd9CZX/Whats-App-Image-2026-09-10-at-16-33-01.jpg?auto=format&fit=crop&w=900&q=85', 'Mousepads personalizados para escritório'],
   ['Quadros', 'https://i.ibb.co/G3c274gm/Whats-App-Image-2026-09-10-at-16-33-01-3.jpg?auto=format&fit=crop&w=900&q=85', 'Quadro decorativo personalizado'],
-  ['Chinelos Personalizados', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrPtweflcHKSlpD5l4I11kjzKtDlL7Pzx8GPZPrEmYH-ewbPB-2Zox81I&s=10?auto=format&fit=crop&w=900&q=85', 'Chinelos e produtos de verão'],
-  ['Chaveiros Personalizados', 'https://http2.mlstatic.com/D_NQ_NP_2X_969444-MLA109377518152_042026-F-kit-100-chaveiros-personalizados-com-sua-logo--fita-acetina.webp?auto=format&fit=crop&w=900&q=85', 'Produtos pequenos para brindes'],    
+  ['Chinelos', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrPtweflcHKSlpD5l4I11kjzKtDlL7Pzx8GPZPrEmYH-ewbPB-2Zox81I&s=10?auto=format&fit=crop&w=900&q=85', 'Chinelos e produtos de verão'],
+  ['Chaveiros', 'https://http2.mlstatic.com/D_NQ_NP_2X_969444-MLA109377518152_042026-F-kit-100-chaveiros-personalizados-com-sua-logo--fita-acetina.webp?auto=format&fit=crop&w=900&q=85', 'Produtos pequenos para brindes'],    
 ];
 
 function Icon({ name, size = 20 }) {
