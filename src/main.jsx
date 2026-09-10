@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const CONFIG = {
-  kitCheckoutUrl: 'https://pay.hotmart.com/H107543517N',
-  cursoCheckoutUrl: 'https://pay.hotmart.com/H107543517N21',
+  kitCheckoutUrl: 'https://pay.hotmart.com/H107543517N?checkoutMode=10',
+  cursoCheckoutUrl: 'https://pay.hotmart.com/T107560375L?off=nzt55jgc&checkoutMode=10',
   studentAreaUrl: 'https://hotmart.com/pt-br/club/comece-nos-personalizados',
   pixelId: '1330495329162779',
   gaMeasurementId: 'G-SJPJS8B9D1',
