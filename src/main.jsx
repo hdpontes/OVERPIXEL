@@ -149,8 +149,8 @@ function App() {
       <header className="header">
         <div className="container nav">
           <a href="#top" className="brand" onClick={() => setMenu(false)}>
-            <span>OVERPIXEL</span>
-            <b>STORE</b>
+            <span>CLUBE</span>
+            <b>DOS PERSONALIZADOS</b>
           </a>
 
           <nav className={menu ? 'navlinks open' : 'navlinks'}>
@@ -538,8 +538,8 @@ function App() {
         <div className="container footerInner">
           <div>
             <a href="#top" className="brand">
-              <span>OVERPIXEL</span>
-              <b>STORE</b>
+              <span>CLUBE</span>
+              <b>DOS PERSONALIZADOS</b>
             </a>
             <p>Produtos digitais para quem quer começar e crescer no mercado de produtos personalizados.</p>
           </div>
