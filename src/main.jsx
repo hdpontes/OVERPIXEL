@@ -5,18 +5,20 @@ import './styles.css';
 const CONFIG = {
   kitCheckoutUrl: 'https://pay.hotmart.com/H107543517N',
   cursoCheckoutUrl: 'https://pay.hotmart.com/H107543517N21',
+  studentAreaUrl: 'https://hotmart.com/pt-br/club/comece-nos-personalizados',
   pixelId: '1330495329162779',
   gaMeasurementId: 'G-SJPJS8B9D1',
 };
 
 const faq = [
-  ['O Kit Comece é só o e-book e a planilha?', 'Não. Além do e-book e da planilha, o cliente recebe acesso aos arquivos, e pode aproveitar as 3 primeiras aulas do curso para conhecer a metodologia antes de entrar no curso completo.'],
-  ['Qual a diferença entre o kit e o curso completo?', 'O Kit Comece entrega a base estratégica e os materiais principais. Já o curso completo oferece aulas práticas, arquivos, grupo no WhatsApp, novas aulas toda semana e uma experiência mais completa para aprender a personalizar produtos e montar o negócio.'],
-  ['O curso completo é mensal?', 'Sim. O acesso ao curso completo fica por R$ 19,90 por mês e oferece continuidade, atualizações e conteúdos práticos em ritmo semanal.'],
+  ['O Kit Comece é só o e-book e a planilha?', 'Não. Além do e-book e da planilha, o cliente recebe acesso aos arquivos, e pode aproveitar as 3 primeiras aulas do curso para conhecer a metodologia antes de entrar no Clube dos Personalizados.'],
+  ['Qual a diferença entre o kit e o Clube dos Personalizados?', 'O Kit Comece entrega a base estratégica e os materiais iniciais. Já o Clube dos Personalizados oferece uma aula completa nova toda semana, biblioteca de aulas, materiais, grupo no WhatsApp e ensinamentos práticos para personalizar produtos e vender.'],
+  ['O Clube dos Personalizados é mensal?', 'Sim. O acesso ao Clube dos Personalizados custa R$ 29,90 por mês e inclui aulas novas toda semana, biblioteca de aulas e materiais para você continuar evoluindo.'],
   ['O kit custa R$ 27,90?', 'Sim. O produto do Kit Comece nos Personalizados é vendido por R$ 27,90 e oferece os materiais iniciais.'],
-  ['O cliente precisa comprar o kit antes do curso?', 'Não. O cliente pode escolher diretamente o produto que melhor atende ao momento dele. O kit é ótimo para começar com a base, e o curso completo é ideal para quem quer aprender em profundidade e ter mais suporte.'],
-  ['O curso completo inclui arquivos e grupo?', 'Sim. O curso completo inclui acesso aos arquivos, aulas práticas, conteúdos atualizados e acesso ao grupo no WhatsApp.'],
-  ['Aula nova toda semana?', 'Sim. Toda semana sai uma aula nova para ensinar a personalizar algum produto e evoluir na prática.'],
+  ['O cliente precisa comprar o kit antes do curso?', 'Não. O cliente pode escolher diretamente o produto que melhor atende ao momento dele. O kit é ótimo para começar com a base, e o Clube dos Personalizados é ideal para quem quer aprender em profundidade e ter mais suporte.'],
+  ['O Clube inclui arquivos e grupo?', 'Sim. O Clube inclui materiais de apoio, biblioteca de aulas e acesso ao grupo no WhatsApp.'],
+  ['Como funcionam as aulas semanais?', 'Toda semana você aprende um produto diferente em uma aula completa, passando por materiais, equipamentos, preparação, arte, produção, acabamento, custo, preço sugerido, margem e como vender.'],
+  ['Quais ferramentas serão ensinadas?', 'Você também aprenderá a trabalhar com CorelDRAW, Photoshop e a criar arquivos para DTF, incluindo técnicas como Halftone.'],
 ];
 
 const benefits = [
@@ -160,6 +162,9 @@ function App() {
               Quero começar
               <Icon name="arrow" size={16} />
             </a>
+            <a href={CONFIG.studentAreaUrl} className="studentLink" target="_blank" rel="noreferrer" onClick={() => setMenu(false)}>
+              Sou aluno
+            </a>
           </nav>
 
           <button className="menubtn" aria-label="Abrir menu" onClick={() => setMenu(!menu)}>
@@ -194,14 +199,14 @@ function App() {
                   <Icon name="arrow" />
                 </a>
                 <a href={CONFIG.cursoCheckoutUrl} className="btn secondary big" onClick={(e) => goCheckout(e, CONFIG.cursoCheckoutUrl, 'hero_curso')}>
-                  CURSO COMPLETO
+                  CLUBE DOS PERSONALIZADOS
                 </a>
               </div>
 
               <div className="trustRow">
                 <span><Icon name="check" size={16} /> E-book</span>
                 <span><Icon name="check" size={16} /> Planilha</span>
-                <span><Icon name="check" size={16} /> Aulas práticas</span>
+                <span><Icon name="check" size={16} /> Aula nova toda semana</span>
               </div>
             </div>
 
@@ -223,7 +228,7 @@ function App() {
 
               <div className="floatTag tagBottom">
                 <span className="miniCheck"><Icon name="check" size={13} /></span>
-                Aulas + arquivos + grupo
+                Aulas + materiais + grupo
               </div>
             </div>
           </div>
@@ -254,7 +259,7 @@ function App() {
                 </h2>
               </div>
               <p>
-                O Kit Comece entrega a base e a clareza para você entender o mercado. O curso completo leva isso para a prática com aulas, arquivos, suporte e conteúdo em evolução.
+                O Kit Comece entrega a base e a clareza para você entender o mercado. O Clube dos Personalizados transforma essa base em prática contínua, com um produto diferente ensinado em profundidade toda semana.
               </p>
             </div>
 
@@ -353,13 +358,13 @@ function App() {
 
               <h2>Escolha o ponto de partida certo para o seu negócio.</h2>
               <p>
-                Se você quer começar com a base e entender o mercado, o Kit Comece é perfeito. Se você quer aprender mais na prática, ter acesso aos arquivos, acompanhamento e conteúdos novos, o curso completo oferece muito mais vantagem.
+                Se você quer começar com a base e entender o mercado, o Kit Comece é perfeito. Se você quer aprender fazendo, com um produto diferente por semana, materiais, biblioteca de aulas e novas técnicas, o Clube dos Personalizados oferece evolução contínua.
               </p>
 
               <div className="valueStack">
                 <div><Icon name="check" /><span>Kit Comece: e-book + planilha + arquivos + 3 primeiras aulas</span></div>
-                <div><Icon name="check" /><span>Curso completo: aulas práticas + arquivos + grupo no WhatsApp</span></div>
-                <div><Icon name="check" /><span>Nova aula toda semana para evoluir no negócio</span></div>
+                <div><Icon name="check" /><span>Clube dos Personalizados: R$ 29,90/mês</span></div>
+                <div><Icon name="check" /><span>1 produto → 1 aula completa toda semana</span></div>
               </div>
             </div>
 
@@ -387,13 +392,13 @@ function App() {
             <div className="compareIntro">
               <div className="eyebrow goldEyebrow">
                 <span className="dot" />
-                VANTAGEM DO CURSO COMPLETO
+                CLUBE DOS PERSONALIZADOS
               </div>
               <h2>
-                Por que <span>vale mais a pena</span> escolher o curso completo?
+                Aprenda um produto novo <span>toda semana.</span>
               </h2>
               <p>
-                O curso completo foi pensado para quem quer aprender fazendo, evoluir com aulas práticas e acompanhar o crescimento do negócio com mais clareza e suporte.
+                O Clube dos Personalizados foi criado para quem quer aprender fazendo e construir repertório de produção. Toda semana, você acompanha uma aula completa de um produto diferente, do material à venda.
               </p>
             </div>
 
@@ -413,17 +418,17 @@ function App() {
               </article>
 
               <article className="compareCard courseCard highlight">
-                <span className="tag">CURSO COMPLETO</span>
-                <h3>R$ 19,90 <small>/mês</small></h3>
+                <span className="tag">CLUBE DOS PERSONALIZADOS</span>
+                <h3>R$ 29,90 <small>/mês</small></h3>
                 <ul>
-                  <li><Icon name="check" size={15} /> Aulas práticas completas</li>
-                  <li><Icon name="check" size={15} /> Acesso aos arquivos</li>
+                  <li><Icon name="check" size={15} /> Aula completa de um produto diferente toda semana</li>
+                  <li><Icon name="check" size={15} /> Biblioteca de aulas e materiais</li>
                   <li><Icon name="check" size={15} /> Grupo no WhatsApp</li>
-                  <li><Icon name="check" size={15} /> Aula nova toda semana</li>
-                  <li><Icon name="check" size={15} /> Conteúdo pensado para evoluir seu negócio</li>
+                  <li><Icon name="check" size={15} /> CorelDRAW, Photoshop e arquivos para DTF</li>
+                  <li><Icon name="check" size={15} /> Custos, margem, preço sugerido e vendas</li>
                 </ul>
                 <a href={CONFIG.cursoCheckoutUrl} className="btn primary full" onClick={(e) => goCheckout(e, CONFIG.cursoCheckoutUrl, 'curso_compare')}>
-                  Quero o curso completo
+                  Quero entrar no Clube
                 </a>
               </article>
             </div>
@@ -433,35 +438,36 @@ function App() {
         <section className="section sectionDark courseDetails">
           <div className="container detailsWrap">
             <div className="detailsCopy">
-              <div className="kicker">CURSO COMPLETO</div>
-              <h2>Aprenda a personalizar produtos com passos práticos e apoio real.</h2>
+              <div className="kicker">CLUBE DOS PERSONALIZADOS</div>
+              <h2>Uma aula completa, um produto diferente, toda semana.</h2>
               <p>
-                Você terá acesso a todos os conteúdos das aulas práticas que ensinam a personalizar produtos, além dos arquivos, do grupo no WhatsApp e de novas aulas todas as semanas para você seguir evoluindo no negócio.
+                Por R$ 29,90/mês, você aprende a personalizar produtos na prática, seguindo o conteúdo do e-book e avançando com uma nova aula completa toda semana. Tenha acesso à biblioteca de aulas, materiais e ao grupo no WhatsApp.
               </p>
 
               <div className="featureList">
-                <div><Icon name="check" size={16} /> Aulas práticas de personalização</div>
-                <div><Icon name="check" size={16} /> Arquivos e materiais para aplicar</div>
-                <div><Icon name="check" size={16} /> Grupo no WhatsApp para dúvidas e suporte</div>
-                <div><Icon name="check" size={16} /> Conteúdo novo toda semana</div>
+                <div><Icon name="check" size={16} /> 1 produto → 1 aula completa toda semana</div>
+                <div><Icon name="check" size={16} /> Materiais, equipamentos, preparação e arte</div>
+                <div><Icon name="check" size={16} /> Produção, acabamento, custo, margem e preço</div>
+                <div><Icon name="check" size={16} /> Como vender e criar arquivos para DTF</div>
+                <div><Icon name="check" size={16} /> CorelDRAW, Photoshop e técnica Halftone</div>
               </div>
             </div>
 
             <div className="detailStack">
               <div className="miniCard">
                 <span>01</span>
-                <strong>Aprenda na prática</strong>
-                <p>Entenda estratégias reais para personalizar produtos e criar propostas mais atraentes.</p>
+                <strong>Do material à produção</strong>
+                <p>Veja os materiais, equipamentos, preparação, arte, produção e acabamento de cada produto.</p>
               </div>
               <div className="miniCard">
                 <span>02</span>
-                <strong>Arquivos e materiais</strong>
-                <p>Tenha tudo em um só lugar para aplicar com mais clareza e rapidez.</p>
+                <strong>Custo e preço de venda</strong>
+                <p>Aprenda a calcular custo, margem e preço sugerido para tomar decisões melhores.</p>
               </div>
               <div className="miniCard">
                 <span>03</span>
-                <strong>Conteúdo contínuo</strong>
-                <p>Receba novidades e aulas semanais para continuar evoluindo no negócio.</p>
+                <strong>Ferramentas profissionais</strong>
+                <p>Aprenda CorelDRAW, Photoshop e a criar arquivos para DTF, incluindo técnicas como Halftone.</p>
               </div>
             </div>
           </div>
@@ -498,13 +504,13 @@ function App() {
               <div className="kicker">COMECE COM SEGURANÇA</div>
               <h2>
                 Escolha sua compra:<br />
-                <span>Kit Comece</span> ou <span>Curso completo</span>.
+                <span>Kit Comece</span> ou <span>Clube dos Personalizados</span>.
               </h2>
             </div>
 
             <div className="finalButtons">
               <a href={CONFIG.kitCheckoutUrl} className="btn primary big" onClick={(e) => goCheckout(e, CONFIG.kitCheckoutUrl, 'final_kit')}>COMPRAR KIT</a>
-              <a href={CONFIG.cursoCheckoutUrl} className="btn secondary big" onClick={(e) => goCheckout(e, CONFIG.cursoCheckoutUrl, 'final_curso')}>CURSO COMPLETO</a>
+              <a href={CONFIG.cursoCheckoutUrl} className="btn secondary big" onClick={(e) => goCheckout(e, CONFIG.cursoCheckoutUrl, 'final_curso')}>CLUBE DOS PERSONALIZADOS</a>
             </div>
           </div>
         </section>
