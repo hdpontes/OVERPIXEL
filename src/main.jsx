@@ -248,6 +248,44 @@ function App() {
           </div>
         </section>
 
+        <section className="section productShowcase" id="produtos">
+          <div className="container">
+            <div className="sectionHead simple">
+              <div>
+                <div className="kicker">ESCOLHA O PRODUTO CERTO</div>
+                <h2>
+                  Personalize produtos que <span>as pessoas querem comprar.</span>
+                </h2>
+              </div>
+              <p>
+                O produto certo pode transformar uma ideia em uma oferta lucrativa. Conheça opções com alta procura e aprenda a avaliar demanda, custo, margem e potencial de venda antes de investir.
+              </p>
+            </div>
+
+            <div className="productGallery">
+              {products.map(([name, image, alt]) => (
+                <article className="productTile" key={name}>
+                  <img src={image} alt={alt} loading="lazy" />
+                  <div className="productTileLabel">
+                    <span>{name}</span>
+                    <Icon name="arrow" size={16} />
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="designLibrary">
+              <div className="libraryIcon"><Icon name="zap" size={24} /></div>
+              <div>
+                <div className="kicker">POTENCIAL DE LUCRO</div>
+                <h3>Venda com mais valor, margem e clareza</h3>
+                <p>Aprenda a escolher produtos, criar ofertas e precificar personalizados para aumentar suas chances de lucrar, sem depender de tentativa e erro.</p>
+              </div>
+              <div className="libraryCount">500+<small>ideias</small></div>
+            </div>
+          </div>
+        </section>
+
         <section className="section sectionDark" id="conteudo">
           <div className="container">
             <div className="sectionHead">
@@ -306,44 +344,6 @@ function App() {
                 “Escolha o produto ideal, entenda o custo e defina o valor com base no mercado.”
               </div>
               <div className="smallNote">Estratégia + prática + execução</div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section productShowcase">
-          <div className="container">
-            <div className="sectionHead simple">
-              <div>
-                <div className="kicker">PRODUTOS PARA COMEÇAR</div>
-                <h2>
-                  Personalize produtos que <span>as pessoas querem comprar.</span>
-                </h2>
-              </div>
-              <p>
-                Veja oportunidades para trabalhar com opções de alta procura, estrutura enxuta e potencial real de lucratividade.
-              </p>
-            </div>
-
-            <div className="productGallery">
-              {products.map(([name, image, alt]) => (
-                <article className="productTile" key={name}>
-                  <img src={image} alt={alt} loading="lazy" />
-                  <div className="productTileLabel">
-                    <span>{name}</span>
-                    <Icon name="arrow" size={16} />
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="designLibrary">
-              <div className="libraryIcon"><Icon name="zap" size={24} /></div>
-              <div>
-                <div className="kicker">BÔNUS E REFERÊNCIAS</div>
-                <h3>Mais de 500 ideias para começar com mais rapidez</h3>
-                <p>Tenha referências para canecas, camisetas e outros itens para produzir com mais clareza e menos improviso.</p>
-              </div>
-              <div className="libraryCount">500+<small>ideias</small></div>
             </div>
           </div>
         </section>
