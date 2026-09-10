@@ -49,11 +49,11 @@ const niches = ['Academias', 'Escolas', 'Igrejas', 'Restaurantes', 'Barbearias',
 
 const products = [
   ['Camisetas Personalizadas', 'https://images.unsplash.com/photo-1578346021958-c58829af708b?auto=format&fit=crop&w=900&q=85', 'Camiseta personalizada com estampa'],
-  ['Quadros', 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=900&q=85', 'Quadro decorativo personalizado'],
-  ['Chinelos', 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=85', 'Chinelos e produtos de verão'],
-  ['Chaveiros Personalizados', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85', 'Produtos pequenos para brindes'],
-  ['Azulejos', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85', 'Peças decorativas personalizadas'],
   ['Canecas', 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=85', 'Canecas personalizadas para presentes'],
+  ['Quadros', 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=900&q=85', 'Quadro decorativo personalizado'],
+  ['Chinelos Personalizados', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrPtweflcHKSlpD5l4I11kjzKtDlL7Pzx8GPZPrEmYH-ewbPB-2Zox81I&s=10?auto=format&fit=crop&w=900&q=85', 'Chinelos e produtos de verão'],
+  ['Chaveiros Personalizados', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85', 'Produtos pequenos para brindes'],
+  ['Azulejos', 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85', 'Peças decorativas personalizadas'],  
 ];
 
 function Icon({ name, size = 20 }) {
