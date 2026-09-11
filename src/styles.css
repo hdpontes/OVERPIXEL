@@ -32,6 +32,76 @@ button { font: inherit; }
 .section { padding: 110px 0; }
 .sectionDark { background: rgba(255,255,255,0.02); }
 
+.page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(38px) scale(0.985);
+  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.heroCopy {
+  animation: heroCopyIn 0.9s 0.1s both cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.heroVisual {
+  animation: heroVisualIn 1s 0.2s both cubic-bezier(0.22, 1, 0.36, 1), floatCard 7s 1.2s ease-in-out infinite;
+}
+
+.benefit,
+.productTile,
+.compareCard,
+.miniCard {
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.benefit:hover,
+.compareCard:hover,
+.miniCard:hover {
+  transform: translateY(-7px);
+  border-color: rgba(227,184,91,0.34);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+.productTile:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 42px rgba(16,37,62,0.22);
+}
+
+.is-visible .benefit:nth-child(2),
+.is-visible .productTile:nth-child(2),
+.is-visible .compareCard:nth-child(2),
+.is-visible .miniCard:nth-child(2) { transition-delay: 0.08s; }
+
+.is-visible .benefit:nth-child(3),
+.is-visible .productTile:nth-child(3),
+.is-visible .miniCard:nth-child(3) { transition-delay: 0.16s; }
+
+@keyframes heroCopyIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroVisualIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -75,6 +145,13 @@ button { font: inherit; }
 }
 
 .navlinks a:hover { color: #fff; transform: translateY(-1px); }
+
+.studentLink {
+  padding: 9px 12px;
+  border: 1px solid rgba(227,184,91,0.35);
+  border-radius: 10px;
+  color: var(--gold) !important;
+}
 
 .navcta,
 .btn {
@@ -210,7 +287,6 @@ h1 em, h2 span { color: var(--gold); font-style: normal; }
 .heroVisual {
   position: relative;
   min-height: 560px;
-  animation: floatCard 7s ease-in-out infinite;
 }
 
 .bookMock,
@@ -878,6 +954,24 @@ h1 em, h2 span { color: var(--gold); font-style: normal; }
 @keyframes floatCard {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 980px) {
