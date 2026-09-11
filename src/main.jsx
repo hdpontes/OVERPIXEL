@@ -5,6 +5,7 @@ import './styles.css';
 const CONFIG = {
   kitCheckoutUrl: 'https://pay.hotmart.com/H107543517N?checkoutMode=10',
   cursoCheckoutUrl: 'https://pay.hotmart.com/T107560375L?off=nzt55jgc&checkoutMode=10',
+  cursoAnualCheckoutUrl: 'https://pay.hotmart.com/T107560375L?off=ufcu5hlu&checkoutMode=6',
   studentAreaUrl: 'https://hotmart.com/pt-br/club/comece-nos-personalizados',
   pixelId: '1330495329162779',
   gaMeasurementId: 'G-SJPJS8B9D1',
@@ -14,6 +15,7 @@ const faq = [
   ['O Kit Comece é só o e-book e a planilha?', 'Não. Além do e-book e da planilha, o cliente recebe acesso aos arquivos, e pode aproveitar as 3 primeiras aulas do curso para conhecer a metodologia antes de entrar no Clube dos Personalizados.'],
   ['Qual a diferença entre o kit e o Clube dos Personalizados?', 'O Kit Comece entrega a base estratégica e os materiais iniciais. Já o Clube dos Personalizados oferece uma aula completa nova toda semana, biblioteca de aulas, materiais, grupo no WhatsApp e ensinamentos práticos para personalizar produtos e vender.'],
   ['O Clube dos Personalizados é mensal?', 'Sim. O acesso ao Clube dos Personalizados custa R$ 29,90 por mês e inclui aulas novas toda semana, biblioteca de aulas e materiais para você continuar evoluindo.'],
+  ['Existe plano anual do Clube?', 'Sim. Você pode escolher o plano anual por R$ 299,90. Além de garantir 12 meses de acesso, essa opção oferece R$ 60,00 de desconto e o gatilho de 2 meses grátis.'],
   ['O kit custa R$ 27,90?', 'Sim. O produto do Kit Comece nos Personalizados é vendido por R$ 27,90 e oferece os materiais iniciais.'],
   ['O cliente precisa comprar o kit antes do curso?', 'Não. O cliente pode escolher diretamente o produto que melhor atende ao momento dele. O kit é ótimo para começar com a base, e o Clube dos Personalizados é ideal para quem quer aprender em profundidade e ter mais suporte.'],
   ['O Clube inclui arquivos e grupo?', 'Sim. O Clube inclui materiais de apoio, biblioteca de aulas e acesso ao grupo no WhatsApp.'],
@@ -414,7 +416,7 @@ function App() {
                 Aprenda um produto novo <span>toda semana.</span>
               </h2>
               <p>
-                O Clube dos Personalizados foi criado para quem quer aprender fazendo e construir repertório de produção. Toda semana, você acompanha uma aula completa de um produto diferente, do material à venda.
+                O Clube dos Personalizados foi criado para quem quer aprender fazendo e construir repertório de produção. Toda semana, você acompanha uma aula completa de um produto diferente, do material à venda. Escolha o plano mensal ou garanta o anual com desconto.
               </p>
             </div>
 
@@ -445,6 +447,22 @@ function App() {
                 </ul>
                 <a href={CONFIG.cursoCheckoutUrl} className="btn primary full" onClick={(e) => goCheckout(e, CONFIG.cursoCheckoutUrl, 'curso_compare')}>
                   Quero entrar no Clube
+                </a>
+              </article>
+
+              <article className="compareCard annualCard highlight">
+                <span className="offerBadge">2 MESES GRÁTIS</span>
+                <span className="tag">PLANO ANUAL</span>
+                <h3>R$ 299,90 <small>/ano</small></h3>
+                <p className="annualSaving">Economize R$ 60,00</p>
+                <ul>
+                  <li><Icon name="check" size={15} /> 12 meses de acesso ao Clube</li>
+                  <li><Icon name="check" size={15} /> Aulas novas toda semana</li>
+                  <li><Icon name="check" size={15} /> Biblioteca de aulas e materiais</li>
+                  <li><Icon name="check" size={15} /> Melhor custo para continuar aprendendo</li>
+                </ul>
+                <a href={CONFIG.cursoAnualCheckoutUrl} className="btn primary full" onClick={(e) => goCheckout(e, CONFIG.cursoAnualCheckoutUrl, 'curso_anual_compare')}>
+                  Quero o plano anual
                 </a>
               </article>
             </div>
