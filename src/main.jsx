@@ -124,6 +124,20 @@ function App() {
   useEffect(() => {
     track('ViewContent', { product: 'kit-comece-e-curso-personalizados' });
 
+    const revealItems = document.querySelectorAll('.section:not(.hero), .proofStrip, .footer');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px' });
+
+    revealItems.forEach((item) => {
+      item.classList.add('reveal-on-scroll');
+      revealObserver.observe(item);
+    });
+
     if (CONFIG.pixelId) {
       const s = document.createElement('script');
       s.innerHTML = `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${CONFIG.pixelId}');fbq('track','PageView');`;
@@ -142,6 +156,8 @@ function App() {
       window.gtag('js', new Date());
       window.gtag('config', CONFIG.gaMeasurementId);
     }
+
+    return () => revealObserver.disconnect();
   }, []);
 
   return (
